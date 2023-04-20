@@ -1,4 +1,4 @@
-from Bio import SeqIO
+from Bio import SeqIO #import necessary library
 
 # Define the input sequences
 seq1 = SeqIO.SeqRecord("aactcgggggtgtggggttgagattgcgcacaagttttcttaaaccctaaaccgcttctgtaatcagaagatttgtgaaaggggtggtttgtccggtgttttcccctttaaaaaaagaaacaccgatgcctgttgtgtctatctcaaagttgaatatatctccctggcaagtttgtaggtagtgccattgacatgaaaattgtcttgtggtcacttcattcctcgcttgccaagcactcccattttttt")
@@ -9,7 +9,7 @@ sequences = [seq1, seq2]
 seq_lengths = [len(s) for s in sequences]
 min_length = min(seq_lengths)
 
-#trim all sequences to the minimimum length
+#trim all sequences to the minimimum length (form of alignment)
 sequences = [s[:min_length] for s in sequences]
 
 # Convert the sequences to uppercase
